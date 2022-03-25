@@ -1,0 +1,17 @@
+
+.col, .col-3{
+    height: 300px;
+}
+
+.col, .col-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.row{
+    border-top: 2px solid #dc3545;
+    border-bottom: 2px solid #dc3545;
+
+}

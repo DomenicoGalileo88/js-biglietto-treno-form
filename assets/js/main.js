@@ -26,7 +26,7 @@ const eta_passeggero = document.getElementById('sconti').value;
 const genera = document.getElementById('genera');
 genera.addEventListener('click', function () {
 
-   full_name.getElementById("nome_passeggero").innerHTML = 'full_name';
+document.getElementById("nome_passeggero").innerHTML = 'full_name';
 
 /*     // calcolo prezzo standard
     const prezzo_standard = km_da_percorrere * prezzo_al_km;

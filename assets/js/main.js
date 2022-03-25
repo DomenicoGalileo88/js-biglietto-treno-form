@@ -16,7 +16,7 @@ if (isNaN(km_da_percorrere)) {
     alert('😱 Devi inserire un numero per i km da percorrere')
 }
 //chiedere all'utente età del passeggero.
-const eta_passeggero = document.getElementById('fascia_di_eta').value;
+const eta_passeggero = document.getElementById('sconti').value;
 if (isNaN(eta_passeggero)) {
     alert('😱 Devi inserire un numero per l\'etá passeggero')
 }

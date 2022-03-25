@@ -10,61 +10,54 @@ Il recap dei dati e l'output del prezzo finale va stampato in pagina (formattato
 
 let prezzo_finale, messaggio;
 const prezzo_al_km = 0.21;
-//immagazzinare dati utente
-const full_name = document.getElementById('full_name').value;
-
-
-// km da percorrere
-const km_da_percorrere = document.getElementById("km_da_percorrere").value;
 
 // età passeggero
-const eta_passeggero = document.getElementById('sconti').value;
 
-    //console.log(km_da_percorrere, eta_passeggero);
-
-//utilità button genera
+//utilità button genera al click
 const genera = document.getElementById('genera');
 genera.addEventListener('click', function () {
 
-document.getElementById("nome_passeggero").innerHTML = 'full_name';
+    // nome del passeggero (quello che inserisce l'utente )
+    const fullName = document.getElementById("full_name").value;
+    document.getElementById("nome_passeggero").innerHTML = fullName;
 
-/*     // calcolo prezzo standard
+    // età passeggero tra maggiorenne, minorenne e over 65
+    let eta_passeggero = document.getElementById("eta");
+    document.getElementById("sconto_applicato").value = eta.options[eta.selectedIndex].text;
+
+    // numero della carrozza casuale da 1 a 20
+    const carrozza = Math.floor(Math.random() * 21);
+    document.getElementById('num_carrozza').innerHTML = carrozza;
+
+    // numero cp casuale
+    const codiceCp = Math.floor(Math.random() * 100000);
+    document.getElementById('codice_cp').innerHTML = codiceCp;
+
+    // km da percorrere
+    const km_da_percorrere = document.getElementById("km_da_percorrere").value;
+
+    // calcolo prezzo standard
     const prezzo_standard = km_da_percorrere * prezzo_al_km;
     //console.log(prezzo_standard);
-
-    //calcolo sconti
+    //calcolo prezzi scontati
     const prezzo_minorenni = prezzo_standard - (prezzo_standard * 0.2)
     const prezzo_over_65 = prezzo_standard - (prezzo_standard * 0.4)
     //console.log(prezzo_minorenni, prezzo_over_65);
 
-    if (eta_passeggero == 'Minorenne') {
-        //   messaggio = 'Sei minorenne hai diritto al prezzo scontato del 20%';
-        prezzo_finale = prezzo_minorenni;
+    let scontoApplicato = document.getElementById('sconto_applicato');
 
-    } else if (eta_passeggero == 'Over 65') {
-        // messaggio = 'Sei un over 65 hai diritto al prezzo scontato del 40%';
-        prezzo_finale = prezzo_over_65
-    } else {
-        // messaggio = '😢 Sorry! prezzo pieno';
-        prezzo_finale = prezzo_standard
+    if (scontoApplicato.value == 'Minorenne' ) {
+        //console.log(prezzo_minorenni);
+
+        document.getElementById('costo_biglietto').innerHTML = `${prezzo_minorenni.toFixed(2)}€`;
+    } else if (scontoApplicato.value == 'Over 65'){
+        //console.log(prezzo_over_65);
+
+        document.getElementById('costo_biglietto').innerHTML = `${prezzo_over_65.toFixed(2)}€`;
+    } else{
+        //console.log(prezzo_standard);
+
+        document.getElementById('costo_biglietto').innerHTML = `${prezzo_standard.toFixed(2)}€`;
     }
-    console.log(prezzo_finale); */
+
 });
-
-
-
-
-
-
-
-// L'output del prezzo finale va scritto in forma umana
-//console.log(`${messaggio}, prezzo biglietto: Euro ${prezzo_finale.toFixed(2)} `);
-/* console.log(prezzo_finale); */
-/* if (isNaN(prezzo_finale)) {
-    document.getElementById('prezzo_biglietto').innerHTML = `😱 Riprova, hai inserito dei dati sbagliati`
-
-} else {
-
-    document.getElementById('prezzo_biglietto').innerHTML = `prezzo biglietto: Euro ${prezzo_finale.toFixed(2)} `
-}
-  */

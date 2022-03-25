@@ -24,9 +24,8 @@
 
         <h1 class="text-uppercase text-white mb-3">Calcola il prezzo del tuo biglietto</h1>
 
-        <section class="dati_utente container bg-light rounded-3">
-            <form action="" class="text-danger">
-
+        <section class="dati_utente container bg-light rounded-3 text-danger">
+           
                 <div class="dati d-flex justify-content-center">
                     <div class="full_name p-5">
                         <h3>Nome Cognome</h3>
@@ -40,9 +39,10 @@
 
                     <div class="fascia_di_eta p-5">
                         <h3>Fascia di età</h3>
-                        <select name="sconti" id="sconti">
-                            <option value="minorenne">Minorenne</option>
-                            <option value="over 65">Over 65</option>
+                        <select name="eta" id="eta">
+                            <option id="min" value="minorenne">Minorenne</option>
+                            <option id="mag" value="maggiorenne">Maggiorenne</option>
+                            <option id="over" value="over65">Over 65</option>
                         </select>
                     </div>
                 </div>
@@ -52,11 +52,10 @@
                     <button class="m-2" id="annulla">Annula</button>
                 </div>
 
-            </form>
-
 
         </section>
         <!-- /.dati_utente container -->
+
         <h2 class=" text-uppercase text-white my-3"> il tuo biglietto</h2>
         <section id="dati_biglietto container bg-light rounded-3">
             <h3 class="text-uppercase">
@@ -74,7 +73,10 @@
                     <h3>
                         Offerta
                     </h3>
-                    <p id="sconto_applicato"></p>
+                    <p>
+                        Sconto
+                        <input type="text" id="sconto_applicato" >
+                    </p>
                 </div>
                 <div class="col">
                     <h3>

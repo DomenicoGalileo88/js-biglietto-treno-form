@@ -13,5 +13,8 @@
 .row{
     border-top: 2px solid #dc3545;
     border-bottom: 2px solid #dc3545;
+}
 
+#dati_biglietto{
+    display: none;
 }

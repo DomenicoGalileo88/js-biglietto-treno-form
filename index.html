@@ -20,7 +20,7 @@
 
 <body class="">
 
-    <div class="container bg-warning text-center mt-5 p-5">
+    <div class="container bg-warning text-center rounded-3 my-5 p-5">
 
         <h1 class="text-uppercase text-white mb-3">Calcola il prezzo del tuo biglietto</h1>
 
@@ -29,17 +29,18 @@
                 <div class="dati d-flex justify-content-center">
                     <div class="full_name p-5">
                         <h3>Nome Cognome</h3>
-                        <input type="text" id="full_name" value="">
+                        <input class="text-center rounded-3" type="text" id="full_name" value="">
                     </div>
 
                     <div class="km_da_percorrere p-5">
                         <h3>Km da percorrere</h3>
-                        <input type="text" id="km_da_percorrere" value="">
+                        <input class="text-center rounded-3" type="text" id="km_da_percorrere" value="">
                     </div>
 
                     <div class="fascia_di_eta p-5">
                         <h3>Fascia di età</h3>
-                        <select name="eta" id="eta">
+                        <select class="rounded-3" name="eta" id="eta">
+                            <option value=""></option>
                             <option id="min" value="minorenne">Minorenne</option>
                             <option id="mag" value="maggiorenne">Maggiorenne</option>
                             <option id="over" value="over65">Over 65</option>
@@ -48,8 +49,8 @@
                 </div>
 
                 <div class="genera_o_annulla d-flex justify-content-center">
-                    <button class="m-2" id="genera">Genera</button>
-                    <button class="m-2" id="annulla">Annulla</button>
+                    <button class="m-2 btn rounded-pill btn-danger" id="genera">Genera</button>
+                    <button class="m-2 btn rounded-pill btn-danger" id="annulla">Annulla</button>
                 </div>
 
 
@@ -63,11 +64,11 @@
             </h3>
 
             <div class="row">
-                <div class="col-3 bg-danger">
+                <div class="col-3 bg-danger text-warning">
                     <h3 class="text-uppercase pt-4">
                         nome passeggero
                     </h3>
-                    <h3 id="nome_passeggero"></h3>
+                    <h3 class="text-capitalize" id="nome_passeggero"></h3>
                 </div>
                 <div class="col-2">
                     <h3>

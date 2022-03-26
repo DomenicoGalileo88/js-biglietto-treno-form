@@ -13,7 +13,8 @@ const prezzo_al_km = 0.21;
 
 // età passeggero
 
-//utilità button genera al click
+/* #region click genera */
+//click button genera al click 
 const genera = document.getElementById('genera');
 genera.addEventListener('click', function () {
 
@@ -60,4 +61,12 @@ genera.addEventListener('click', function () {
         document.getElementById('costo_biglietto').innerHTML = `${prezzo_standard.toFixed(2)}€`;
     }
 
+});
+/* #endregion click genera */
+
+
+const annulla = document.getElementById('annulla');
+
+annulla.addEventListener('click', function RefreshWindow() {
+    window.location.reload(true);
 });
